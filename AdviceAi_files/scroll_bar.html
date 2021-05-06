@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)chrome-extension://nphnhlhdlbonnekhjlmphinfnmekiifk/pages/scroll_bar.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="chrome-extension://nphnhlhdlbonnekhjlmphinfnmekiifk/pages/css.css">
+	<style>
+	body
+	{
+	--sb_block_opacity:0.8;
+	}
+	
+	.scroll_bar
+	{
+	width :100vw;
+	height:100vh;
+	display:flex;
+	align-items:flex-start;
+	}
+	
+	/* .scroll_bar:hover
+	{
+	right:0px;
+	} */
+	
+	.scroll_bar .sb_border
+	{
+	width :2px;
+	height:100vh;
+	background:transparent;
+	}
+	
+	.scroll_bar .sb_block_out
+	{
+	width :16px;
+	height:100vh;
+	overflow:hidden;
+	background:rgba(240, 240, 240, 0);
+	cursor:pointer;
+	}
+	
+	.scroll_bar .sb_block
+	{
+	width :16px;
+	height:100px;
+	background-image:url("../img/pinstriped_suit.png");
+	/* background-color:rgba(0,0,0,0.5); */ /*#cdcdcd*/
+	/* transition:background-color 200ms; */
+	box-sizing:border-box;
+	opacity:var(--sb_block_opacity);
+	user-select:none;
+    -webkit-user-drag:none;
+	}
+	
+	.scroll_bar .sb_block:hover
+	{
+	background-color:#000; /*a6a6a6*/
+	/* background-image:linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
+	}
+	
+	.scroll_bar .new_year
+	{
+	width :100%;
+	height:100%;
+	display:none;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	pointer-events:none;
+	}
+	
+	.scroll_bar .new_year div
+	{
+	margin-bottom:2px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:15px;
+	height:15px;
+	}
+	
+	.scroll_bar .new_year p
+	{
+	color:#666;
+	font-size:12px;
+	font-style:italic;
+	font-weight:bold;
+	}
+	</style>
+</head>
+<body>
+	<div class="scroll_bar">
+	    <div class="sb_border"></div>
+	    <div class="sb_block_out">
+		    <div class="sb_block">
+			    <div class="new_year">
+			        <div><p>2</p></div>
+			        <div><p>0</p></div>
+			        <div><p>2</p></div>
+			        <div><p style="color:red">1</p></div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+    <script src="chrome-extension://nphnhlhdlbonnekhjlmphinfnmekiifk/pages/scroll_bar.js"></script>
+</body></html>
